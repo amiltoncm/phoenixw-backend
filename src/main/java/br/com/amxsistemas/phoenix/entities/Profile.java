@@ -1,12 +1,12 @@
 package br.com.amxsistemas.phoenix.entities;
 
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
@@ -14,14 +14,37 @@ import java.util.UUID;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name="profiles")
 public class Profile {
 
     @Id
+    @GeneratedValue()
+    @Column(name = "prf_id")
     private UUID id;
 
+    @Column(name = "prf_code", unique = true, nullable = false)
     private int code;
 
+    @Column(name = "prf_name", unique = true, nullable = false, length = 50)
     private String name;
 
+    @Column(name = "dst_id", unique = true, nullable = false)
     private int statusId;
+
+    @Column(name = "prf_created", updatable = false)
+    private LocalDateTime createdOn;
+
+    @Column(name = "prf_updated", nullable = false)
+    private LocalDateTime updatedOn;
+
+    @PrePersist
+    public void prePersist() {
+        createdOn = LocalDateTime.now();
+    }
+
+    @PreUpdate
+    public void preUpdate() {
+        updatedOn = LocalDateTime.now();
+    }
+
 }
