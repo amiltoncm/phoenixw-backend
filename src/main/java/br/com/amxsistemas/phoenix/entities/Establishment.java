@@ -1,14 +1,13 @@
 package br.com.amxsistemas.phoenix.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Table;
+import br.com.amxsistemas.phoenix.utils.UserLogger;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
@@ -20,6 +19,7 @@ import java.util.UUID;
 public class Establishment {
 
     @Id
+    @GeneratedValue
     @Column(name = "etb_id")
     private UUID id;
 
@@ -31,5 +31,31 @@ public class Establishment {
 
     @Column(name = "dst_id", nullable = false)
     private int statusId;
+
+    @Column(name = "etb_created", updatable = false)
+    private LocalDateTime created;
+
+    @Column(name = "use_created", updatable = false)
+    private UUID userCreated;
+
+    @Column(name = "etb_updated", nullable = false)
+    private LocalDateTime updated;
+
+    @Column(name = "use_updated", nullable = false)
+    private UUID userUpdated;
+
+    @PrePersist
+    public void prePersist() {
+
+        created = LocalDateTime.now();
+        userCreated = UserLogger.getUserLog();
+    }
+
+    @PreUpdate
+    public void preUpdate() {
+
+        updated = LocalDateTime.now();
+        userUpdated = UserLogger.getUserLog();
+    }
 
 }

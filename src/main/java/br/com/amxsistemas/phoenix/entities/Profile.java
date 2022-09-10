@@ -32,19 +32,19 @@ public class Profile {
     private int statusId;
 
     @Column(name = "prf_created", updatable = false)
-    private LocalDateTime createdOn;
+    private LocalDateTime created;
 
     @Column(name = "prf_updated", nullable = false)
-    private LocalDateTime updatedOn;
+    private LocalDateTime updated;
 
     @PrePersist
     public void prePersist() {
-        createdOn = LocalDateTime.now();
+        created = LocalDateTime.now();
     }
 
     @PreUpdate
     public void preUpdate() {
-        updatedOn = LocalDateTime.now();
+        updated = LocalDateTime.now();
     }
 
 }
