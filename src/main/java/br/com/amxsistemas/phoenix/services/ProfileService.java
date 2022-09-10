@@ -24,7 +24,7 @@ public class ProfileService {
     @Transactional
     public Profile save(Profile profile) throws ParseException {
         LocalDateTime localDateTime = LocalDateTime.now();
-        profile.setUpdatedOn(localDateTime);
+        profile.setUpdated(localDateTime);
         return profileRepository.save(profile);
     }
 

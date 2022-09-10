@@ -4,8 +4,8 @@ public class Language {
 
     private static String language;
 
-    public void setLanguage () {
-        language = "PT-BR";
+    public static void setLanguage(String language) {
+        Language.language = language;
     }
 
     public static String getLanguage() {

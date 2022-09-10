@@ -37,7 +37,7 @@ public class StatusController {
     }
 
     @GetMapping("/{id}")
-    Status get(@PathVariable("id") int id) {
+    Status getById(@PathVariable("id") int id) {
         return statusService.getById(id);
     }
 
