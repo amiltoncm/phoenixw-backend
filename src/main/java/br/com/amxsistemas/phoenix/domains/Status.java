@@ -22,7 +22,7 @@ public class Status {
     @Column(name="dst_id")
     private int id;
 
-    @Column(name="dst_name", unique = true, nullable=false)
+    @Column(name="dst_name", unique = true, nullable = false)
     private String name;
 
 }

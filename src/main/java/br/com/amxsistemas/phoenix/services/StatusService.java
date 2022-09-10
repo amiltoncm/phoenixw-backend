@@ -27,9 +27,9 @@ public class StatusService {
     public String saveList(List<Status> status) {
         try {
             statusRepository.saveAll(status);
-            return Messages.getMsgResult(1, "");
+            return Messages.getMessage(4);
         } catch(Exception e) {
-            return Messages.getMsgResult(0, e.getMessage());
+            return Messages.getMessage(3);
         }
     }
 
@@ -46,7 +46,7 @@ public class StatusService {
     @Transactional
     public Status getById(int id) {
         var opt = statusRepository.findById(id);
-        return opt.orElseThrow(() -> new EntityNotFoundException(Messages.getMessage("OBJECTNOTFOUND")));
+        return opt.orElseThrow(() -> new EntityNotFoundException(Messages.getMessage(2)));
     }
 
 }

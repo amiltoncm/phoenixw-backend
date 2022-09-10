@@ -20,16 +20,16 @@ import java.util.UUID;
 public class Establishment {
 
     @Id
-    @Column(name="etb_id")
+    @Column(name = "etb_id")
     private UUID id;
 
-    @Column(name="etb_code", unique = true, nullable=false)
+    @Column(name = "etb_code", unique = true, nullable = false)
     private int code;
 
-    @Column(name="etb_name", unique = true, nullable=false, length=70)
+    @Column(name = "etb_name", unique = true, nullable = false, length = 70)
     private String name;
 
-    @Column(name="dst_id", nullable=false)
+    @Column(name = "dst_id", nullable = false)
     private int statusId;
 
 }
