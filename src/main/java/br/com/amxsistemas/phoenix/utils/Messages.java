@@ -3,9 +3,7 @@ package br.com.amxsistemas.phoenix.utils;
 public class Messages {
 
     public static String getMessage(int messageCode) {
-
-        String language = Language.getLanguage();
-        return getMessageCode(language, messageCode);
+        return getMessageCode(Language.getLanguage(), messageCode);
     }
 
     public static String getMessageCode(String language, int messageCode) {

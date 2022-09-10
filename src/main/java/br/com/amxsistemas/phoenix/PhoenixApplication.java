@@ -1,5 +1,6 @@
 package br.com.amxsistemas.phoenix;
 
+import br.com.amxsistemas.phoenix.utils.Language;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -8,6 +9,7 @@ public class PhoenixApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(PhoenixApplication.class, args);
+		Language.setLanguage("PT-BR");
 	}
 
 }
