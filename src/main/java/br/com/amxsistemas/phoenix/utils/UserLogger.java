@@ -4,14 +4,13 @@ import java.util.UUID;
 
 public class UserLogger {
 
-    private static UUID userLog;
+    private UUID userLog;
 
-    public static void setUserLog(UUID id) {
-
-        userLog = id;
+    public void setUserLog() {
+        userLog = UUID.fromString("0");
     }
 
-    public static UUID getUserLog() {
+    public UUID getUserLog() {
         return userLog;
     }
 

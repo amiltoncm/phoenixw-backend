@@ -18,12 +18,12 @@ public class EstablishmentController {
     }
 
     @PostMapping
-    Establishment save(@RequestBody Establishment establishment) {
+    Establishment save(Establishment establishment) {
         return establishmentService.save(establishment);
     }
 
     @DeleteMapping("/{id}")
-    void delete (@PathVariable("id") UUID id) {
+    void delete (UUID id) {
         establishmentService.delete(id);
     }
 
@@ -33,7 +33,7 @@ public class EstablishmentController {
     }
 
     @GetMapping("/{id}")
-    public Establishment getById(@PathVariable("id") UUID id) {
+    public Establishment getById(UUID id) {
         return establishmentService.getById(id);
     }
 
