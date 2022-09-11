@@ -1,5 +1,6 @@
 package br.com.amxsistemas.phoenix.entities;
 
+import br.com.amxsistemas.phoenix.utils.UserLogger;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -47,14 +48,14 @@ public class Establishment {
     public void prePersist() {
 
         created = LocalDateTime.now();
-        //userCreated = UserLogger.getUserLog();
+        userCreated = UserLogger.getUserLog();
     }
 
     @PreUpdate
     public void preUpdate() {
 
         updated = LocalDateTime.now();
-        //userUpdated = UserLogger.getUserLog();
+        userUpdated = UserLogger.getUserLog();
     }
 
 }
