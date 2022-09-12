@@ -31,6 +31,9 @@ public class User {
     @Column(name = "use_password", nullable = false, length = 128)
     private String password;
 
+    @Column(name = "use_email", nullable = false, length = 128)
+    private String email;
+
     @Column(name = "etb_id")
     private UUID establishmentId;
 
