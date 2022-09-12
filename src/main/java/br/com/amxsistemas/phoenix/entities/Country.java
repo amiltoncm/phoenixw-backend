@@ -1,6 +1,6 @@
 package br.com.amxsistemas.phoenix.entities;
 
-import br.com.amxsistemas.phoenix.utils.UserLogger;
+import br.com.amxsistemas.phoenix.utils.logger.UserLogger;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;

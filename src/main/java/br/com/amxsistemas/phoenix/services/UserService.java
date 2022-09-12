@@ -2,7 +2,7 @@ package br.com.amxsistemas.phoenix.services;
 
 import br.com.amxsistemas.phoenix.entities.User;
 import br.com.amxsistemas.phoenix.repositories.UserRepository;
-import br.com.amxsistemas.phoenix.utils.Messages;
+import br.com.amxsistemas.phoenix.utils.messages.Messages;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
@@ -24,6 +24,8 @@ public class UserService {
     public User save(User user) {
         LocalDateTime localDateTime = LocalDateTime.now();
         user.setUpdated(localDateTime);
+//        user.setPassword(bCryptPasswordEncoder
+//                .encode(user.getPassword()));
         return userRepository.save(user);
     }
 

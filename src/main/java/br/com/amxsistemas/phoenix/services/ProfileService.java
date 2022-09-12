@@ -2,7 +2,7 @@ package br.com.amxsistemas.phoenix.services;
 
 import br.com.amxsistemas.phoenix.entities.Profile;
 import br.com.amxsistemas.phoenix.repositories.ProfileRepository;
-import br.com.amxsistemas.phoenix.utils.Messages;
+import br.com.amxsistemas.phoenix.utils.messages.Messages;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
