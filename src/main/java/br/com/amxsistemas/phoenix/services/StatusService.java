@@ -19,7 +19,7 @@ public class StatusService {
     }
 
     @Transactional
-    public Status save (Status status) {
+    public Status save(Status status) {
         return statusRepository.save(status);
     }
 
@@ -34,7 +34,7 @@ public class StatusService {
     }
 
     @Transactional
-    public void delete (int id) {
+    public void delete(int id) {
         statusRepository.deleteById(id);
     }
 
