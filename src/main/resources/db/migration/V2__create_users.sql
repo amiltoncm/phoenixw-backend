@@ -1,8 +1,9 @@
 CREATE TABLE public.users (
   use_id UUID NOT NULL,
-  use_code BIGSERIAL,
+  use_code BIGSERIAL NOT NULL,
   use_name VARCHAR(25) NOT NULL,
   use_password VARCHAR(128) NOT NULL,
+  use_email VARCHAR(128) NOT NULL,
   etb_id UUID,
   prf_id UUID NOT NULL,
   dst_id INTEGER NOT NULL,
