@@ -18,6 +18,6 @@ public class UserSecurityService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         var opt = userRepository.findByName(username);
         var user = opt.orElseThrow(()-> new UsernameNotFoundException(Messages.getMessage(5)));
-        return new UserDetails(user.getName(), user.getPassword());
+        return new UserDetails(user.getUserName(), user.getPassword());
     }
 }

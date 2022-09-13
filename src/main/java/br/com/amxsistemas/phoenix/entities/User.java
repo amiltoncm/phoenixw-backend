@@ -59,4 +59,7 @@ public class User {
         updated = LocalDateTime.now();
     }
 
+    public Object getUserName() {
+        return this.name;
+    }
 }

@@ -4,6 +4,8 @@ import br.com.amxsistemas.phoenix.utils.language.Language;
 import br.com.amxsistemas.phoenix.utils.logger.UserLogger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.util.UUID;
 
@@ -16,6 +18,11 @@ public class PhoenixApplication {
 		Language.setLanguage("PT-BR");
 		UserLogger.setUserLog(UUID.fromString("6caef3e5-a173-4e5f-97aa-da56a413ee0a"));
 
+	}
+
+	@Bean
+	public BCryptPasswordEncoder bCryptPasswordEncoder() {
+		return new BCryptPasswordEncoder();
 	}
 
 }
