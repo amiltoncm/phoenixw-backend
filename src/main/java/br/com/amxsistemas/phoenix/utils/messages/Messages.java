@@ -1,4 +1,6 @@
-package br.com.amxsistemas.phoenix.utils;
+package br.com.amxsistemas.phoenix.utils.messages;
+
+import br.com.amxsistemas.phoenix.utils.language.Language;
 
 public class Messages {
 
@@ -14,6 +16,7 @@ public class Messages {
                 case 2 -> "Objeto não encontrado!";
                 case 3 -> "Erro ao gravar lista!";
                 case 4 -> "Lista adicionada com sucesso!";
+                case 5 -> "Usuário não encontrado!";
                 default -> "Erro genérico!";
             };
         }
@@ -24,6 +27,7 @@ public class Messages {
                 case 2 -> "Object not found!";
                 case 3 -> "Error on post list!";
                 case 4 -> "List added with success!";
+                case 5 -> "User not found!";
                 default -> "Generic error!";
             };
         }

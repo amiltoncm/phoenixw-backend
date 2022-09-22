@@ -1,4 +1,4 @@
-package br.com.amxsistemas.phoenix.utils;
+package br.com.amxsistemas.phoenix.utils.logger;
 
 import java.util.UUID;
 

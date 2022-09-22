@@ -1,4 +1,4 @@
-package br.com.amxsistemas.phoenix.utils;
+package br.com.amxsistemas.phoenix.utils.language;
 
 public class Language {
 

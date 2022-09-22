@@ -2,8 +2,8 @@ package br.com.amxsistemas.phoenix.services;
 
 import br.com.amxsistemas.phoenix.entities.Country;
 import br.com.amxsistemas.phoenix.repositories.CountryRepository;
-import br.com.amxsistemas.phoenix.utils.Messages;
-import br.com.amxsistemas.phoenix.utils.UserLogger;
+import br.com.amxsistemas.phoenix.utils.messages.Messages;
+import br.com.amxsistemas.phoenix.utils.logger.UserLogger;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
